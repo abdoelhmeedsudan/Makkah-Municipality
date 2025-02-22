@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
 import MainLayout from "./components/layout/MainLayout";
+import { i18n } from 'platformscode-new-react'
 
 function App() {
   const [count, setCount] = useState(0);
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -13,5 +13,5 @@ function App() {
     </>
   );
 }
-
+//
 export default App;

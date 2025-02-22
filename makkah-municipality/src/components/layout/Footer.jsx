@@ -8,36 +8,36 @@ function Footer() {
         NavLinks={true}
         groupLinks={[
           {
-            title: "Overview",
+            title: "ملخص",
             links: [
-              { name: "About [name of the portal]", target: "" },
-              { name: "Privacy and terms of use", target: "" },
-              { name: "How to use [name of the portal]", target: "" },
-              { name: "News and events", target: "" },
-              { name: "Service level agreement statistics", target: "" },
+              { name: "حول بوابة أمانة العاصمة المقدسة", target: "" },
+              { name: "الخصوصية وشروط الاستخدام", target: "" },
+              { name: "كيفية استخدام البوابة", target: "" },
+              { name: "الأخبار والأحداث", target: "" },
+              { name: "إحصائيات اتفاقية مستوى الخدمة", target: "" },
             ],
           },
           {
-            title: "Important links",
+            title: "روابط مهمة",
             links: [
-              { name: "National service portal", target: "" },
-              { name: "Open government data", target: "" },
+              { name: "بوابة الخدمة الوطنية", target: "" },
+              { name: "البيانات الحكومية المفتوحة", target: "" },
               {
-                name: "National strategy for data & Artificial intelligence",
+                name: "الاستراتيجية الوطنية للبيانات والذكاء الاصطناعي",
                 target: "",
               },
-              { name: "Open data portal", target: "" },
-              { name: "E-Participation portal", target: "" },
+              { name: "بوابة البيانات المفتوحة", target: "" },
+              { name: "بوابة المشاركة الإلكترونية", target: "" },
             ],
           },
           {
-            title: "Contact & support",
+            title: "الاتصال والدعم",
             links: [
-              { name: "Customer hub", target: "" },
-              { name: "Contact us", target: "" },
-              { name: "Engage with Us", target: "" },
-              { name: "Submit complaint", target: "" },
-              { name: "Report corruption", target: "" },
+              { name: "رقم الهاتف : 25701 39555", target: "" },
+              { name: "تواصل معنا", target: "" },
+              { name: "شارك معنا", target: "" },
+              { name: "تقديم شكوى", target: "" },
+              { name: "الإبلاغ عن الفساد", target: "" },
             ],
           },
         ]}
