@@ -4,25 +4,6 @@ html, body {
     height: 100%;
     margin: 0;
   }
-  /* استخدام Flexbox في العنصر المغلف */
-  .wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  /* منطقة المحتوى تأخذ المساحة المتبقية */
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
-  /* تنسيق الفوتر */
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-  }
-
 
   .shadow-custom {
     --tw-shadow: 0px 4px 8px -2px rgba(16, 24, 40, .1), 0px 2px 4px -2px rgba(16, 24, 40, .06);

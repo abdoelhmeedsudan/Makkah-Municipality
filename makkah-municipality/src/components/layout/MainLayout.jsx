@@ -1,19 +1,17 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
-import Home from '../../features/home/Home'
-import AboutUs from '../../features/aboutus/AboutUs'
 
 function MainLayout() {
   return (
-<div className="wrapper">
- <Header/>
-  <div className="content">
- <AboutUs></AboutUs>
-  </div>
-  <Footer/>
-</div>
-
+    <div className="wrapper">
+      <Header />
+      <div className="content">
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
   )
 }
 

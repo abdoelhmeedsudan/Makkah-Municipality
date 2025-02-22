@@ -1,8 +1,10 @@
 import React from 'react'
-import {DgaFooter} from 'platformscode-new-react'
+import {DgaFooter} from 'platformscode-new-react';
+
+
+
 function Footer() {
   return (
-   <>
      <DgaFooter
         background="DarkGreen"
         NavLinks={true}
@@ -108,7 +110,6 @@ function Footer() {
           "https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg",
         ]}
       />
-   </>
   )
 }
 

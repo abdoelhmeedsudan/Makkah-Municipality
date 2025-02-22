@@ -1,69 +1,34 @@
-import React, { useEffect, useState, useMemo } from 'react';
-import { DgaCard } from 'platformscode-new-react';
+import React from "react";
+import { DgaCarousel, DgaCarouselItem, DgaCard } from "platformscode-new-react";
+import videoSource from "../../assets/videos/1.mp4";
 
 function Slider() {
-  const numberInView = 3;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [inView, setInView] = useState([]);
-  const [inLeftView, setInLeftView] = useState([]);
-  const [inRightView, setInRightView] = useState([]);
-
-  // Memoize the cards array so it doesn't change on every render.
-  const cards = useMemo(() => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], []);
-
-  useEffect(() => {
-    const start = currentIndex * numberInView;
-    const end = start + numberInView;
-    setInView(cards.slice(start, end));
-    setInLeftView(cards.slice(-numberInView));
-    setInRightView(cards.slice(end, end + numberInView));
-  }, [currentIndex, cards, numberInView]);
-
-  const handleNext = () => {
-    if ((currentIndex + 1) * numberInView < cards.length) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      setCurrentIndex(0);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    } else {
-      setCurrentIndex(Math.floor((cards.length - 1) / numberInView));
-    }
-  };
-
   return (
-    <div>
-      <div className="slider-container">
-        <div className="cards flex gap-[16px] overflow-hidden">
-          {inView.map((cardValue, i) => (
-            <DgaCard
-              key={i.toString()}
-              cardTitle={`Card ${cardValue}`}
-              description={`Description for card ${cardValue}`}
-              primaryActionLabel="Action"
-              secondaryActionLabel="Action"
-            />
-          ))}
+    <section className="mt-0 bg-[#F9FAFB]">
+      <div className="relative h-[491px]">
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute w-full h-full object-cover"
+        >
+          <source src={videoSource} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* عنصر التدرج الذي يغطي كامل الحاوية */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(65.28deg, rgba(20, 87, 58, 0) -24.53%, #1B8354 62.51%)'
+          }}
+        >
+          {/* المحتوى الذي تود عرضه فوق التدرج */}
+          <div className="relative flex gap-[16px] md:-translate-x-[calc(100%/4-16px+(16px/4))] xl:-translate-x-[calc(100%/4-16px+(16px/4))/2]">
+          
+          </div>
         </div>
       </div>
-      <div className="controls mt-4 flex justify-between">
-        <button onClick={handlePrev} className="prev-button">Prev</button>
-        <button onClick={handleNext} className="next-button">Next</button>
-      </div>
-      <div className="dots mt-[36px] flex justify-center items-center gap-[8px]">
-        {Array.from({ length: Math.ceil(cards.length / numberInView) }).map((_, index) => (
-          <span
-            key={index}
-            className={`w-[16px] h-[16px] rounded-full cursor-pointer ${index === currentIndex ? 'bg-[var(--stepper-button-completed,#1B8354)]' : 'bg-[var(--background-neutral-200,#E5E7EB)]'}`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }
 
