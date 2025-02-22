@@ -1,17 +1,22 @@
-import { useState } from "react";
+// App.jsx
+import { useEffect } from "react";
 import "./App.css";
+import { useTranslation } from "react-i18next";
 import MainLayout from "./components/layout/MainLayout";
-import { i18n } from 'platformscode-new-react'
 
 function App() {
-  const [count, setCount] = useState(0);
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    // Force the body direction to RTL on mount
+    document.body.setAttribute("dir", "rtl");
+  }, []);
 
   return (
     <>
-      <MainLayout></MainLayout>
+      <MainLayout />
     </>
   );
 }
-//
+
 export default App;

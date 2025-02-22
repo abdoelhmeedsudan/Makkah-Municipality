@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {DgaCard} from 'platformscode-new-react'; 
+import React, { useEffect, useState, useMemo } from 'react';
+import { DgaCard } from 'platformscode-new-react';
 
 function Slider() {
   const numberInView = 3;
@@ -7,19 +7,17 @@ function Slider() {
   const [inView, setInView] = useState([]);
   const [inLeftView, setInLeftView] = useState([]);
   const [inRightView, setInRightView] = useState([]);
-  
-  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  // Memoize the cards array so it doesn't change on every render.
+  const cards = useMemo(() => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], []);
 
   useEffect(() => {
     const start = currentIndex * numberInView;
     const end = start + numberInView;
     setInView(cards.slice(start, end));
-    
     setInLeftView(cards.slice(-numberInView));
-
-    
     setInRightView(cards.slice(end, end + numberInView));
-  }, [currentIndex, cards]);
+  }, [currentIndex, cards, numberInView]);
 
   const handleNext = () => {
     if ((currentIndex + 1) * numberInView < cards.length) {
