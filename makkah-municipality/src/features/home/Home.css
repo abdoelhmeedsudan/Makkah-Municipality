@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+    .md\:px-\[80px\] {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .xl\:-translate-x-\[calc\(100\%\/4-16px\+\(16px\/4\)\)\/2\] {
+        --tw-translate-x: calc((25% - 12px) / -2);
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+}
+@media (min-width: 768px) {
+    .md\:-translate-x-\[calc\(100\%\/4-16px\+\(16px\/4\)\)\] {
+        --tw-translate-x: calc((25% - 12px)* -1);
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+}
+
+
+.custom-card {
+    padding: 16px; /* نفس القيمة المستخدمة في var(--spacing-xl,16px) */
+    border: 1px solid #D2D6DB; /* استخدام نفس لون الحد */
+    border-radius: 16px; /* نصف قطر الزوايا 16px */
+    background-color: #ffffff; /* خلفية بيضاء */
+    /* يمكنك إضافة المزيد من التنسيقات حسب الحاجة */
+  }
+  
+  /* مثال لتنسيقات إضافية لمحتوى الحاوية */
+  .card-container {
+    /* يمكنك تعديل تنسيق الحاوية إذا لزم الأمر */
+  }

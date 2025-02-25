@@ -1,20 +1,14 @@
 import React from 'react'
-import {DgaFeaturedIcon } from 'platformscode-new-react'
+import {DgaFeaturedIcon } from 'platformscode-new-react';
 
 function AboutUsSection() {
   return (
    <>
-    <div className="pt-[40px] px-[16px] md:px-[80px]">
+   
         <section className="mt-[24px]">
           <h1 className="display-sm-bold text-[#161616] mb-4">
-            About us Section
+          أمانة العاصمة المقدسة في أرقام
           </h1>
-          <p className="text-md-regular text-[#161616] mb-8">
-            Here you can add a brief description about the purpose of the portal
-            followed with a call to action button and an image or an
-            illustration on the left hand side.
-          </p>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[32px] mt-[32px]">
             {[
               {
@@ -67,7 +61,6 @@ function AboutUsSection() {
             ))}
           </div>
         </section>
-        </div>
    </>
   )
 }
